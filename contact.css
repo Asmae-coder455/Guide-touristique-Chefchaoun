@@ -1,0 +1,227 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans 3', Arial, sans-serif;
+    background: #fff;
+    color: #1a1a1a;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 100%;
+    background: transparent;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 2rem;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.navbar-logo img {
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+}
+
+.navbar-menu li a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    padding: 6px 18px;
+    border-radius: 25px;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.navbar-menu li a:hover,
+.navbar-menu li a.active {
+    color: white;
+    background-color: rgb(56, 178, 243);
+    box-shadow: 0 0 10px rgba(4,43,240,0.7), 0 0 20px rgba(0,180,216,0.4);
+    border-color: rgba(40,240,243,0.5);
+}
+
+.navbar-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.navbar-toggle .bar {
+    background: white;
+    height: 3px;
+    width: 25px;
+    margin: 5px auto;
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
+/* Herro */
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 60px 20px 50px;
+    color: rgb(8, 145, 224);
+    text-shadow: 0 3px 12px rgba(0,0,0,0.7);
+}
+
+.hero h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-top: 45px;
+    margin-bottom: 10px;
+    color:  rgba(34, 85, 224, 1);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #0c67fb;
+}
+
+.container-full{
+
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.container-full h2{
+
+    font-size: 2rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 40px;
+}
+
+/* ==========================
+   LAYOUT
+========================== */
+
+.contact-wrapper{
+
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+/* ==========================
+   INFORMATIONS
+========================== */
+
+.contact-info h3,
+.carte h3{
+
+    font-size: 1.4rem;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.contact-info p{
+
+    margin-bottom: 22px;
+    line-height: 1.9;
+    color: #444;
+}
+
+.contact-info strong{
+
+    color: #222;
+}
+
+.contact-info a{
+
+    color: #006699;
+    text-decoration: none;
+}
+
+.contact-info a:hover{
+
+    text-decoration: underline;
+}
+
+.contact-info hr{
+
+    border: none;
+    border-top: 1px solid #e5e5e5;
+    margin: 35px 0;
+}
+
+/* ==========================
+   CARTE
+========================== */
+
+.carte iframe{
+
+    width: 100%;
+    height: 450px;
+
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width:768px){
+
+    .container-full{
+
+        margin: 40px auto;
+    }
+
+    .container-full h2{
+
+        font-size: 1.7rem;
+    }
+
+    .carte iframe{
+
+        height: 350px;
+    }
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservation - Tétouan</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reservation.css">
+    <style>
+        body{
+            background: rgb(72, 184, 236);
+             min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar">
+    <div class="navbar-container">
+        <a href="index.html" class="navbar-logo">
+            <img src="logo.jpg" alt="Logo Chefchaouen">
+            Chefchaouen
+        </a>
+        <ul class="navbar-menu" id="navMenu">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="lieux.html" class="active">Lieux Touristiques</a></li>
+            <li><a href="reservation.html">Réservation</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="navbar-toggle" id="navToggle" aria-label="Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </div>
+</nav>
+<div class="hero">
+    <h1>Guide Touristique de Chefchaouen</h1>
+    <p>La Perle Bleue du Nord du Maroc</p>
+</div>
+
+<div class="container-form">
+    <h2>Formulaire de Réservation</h2>
+    <p>Remplissez le formulaire ci-dessous pour réserver votre visite guidée à Tétouan.</p>
+
+    <form action="#" method="post">
+
+        <fieldset>
+            <legend>Informations personnelles</legend>
+
+            <div class="champ">
+                <label for="nom">Nom complet :</label>
+                <input type="text" id="nom" name="nom" placeholder="Ex : Fatima Zahra" required>
+            </div>
+
+            <div class="champ">
+                <label for="email">Adresse email :</label>
+                <input type="email" id="email" name="email" placeholder="exemple@email.com" required>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Détails de la visite</legend>
+
+            <div class="champ">
+                <label for="date">Date de visite :</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <div class="champ">
+                <label for="personnes">Nombre de personnes :</label>
+                <input type="number" id="personnes" name="personnes" min="1" max="20" value="1" required>
+            </div>
+
+            <div class="champ">
+                <label for="type_visite">Type de visite :</label>
+                <select id="type_visite" name="type_visite">
+                    <option value="">-- Choisir --</option>
+                    <option value="medina">Visite de la Médina</option>
+                    <option value="musees">Tour des Musées</option>
+                    <option value="gastronomie">Circuit Gastronomique</option>
+                    <option value="nature">Excursion Nature</option>
+                    <option value="complet">Circuit Complet</option>
+                </select>
+            </div>
+
+            <div class="champ">
+                <label for="ville">Ville de départ :</label>
+                <input type="text" id="ville" name="ville" list="villes" placeholder="Votre ville...">
+                <datalist id="villes">
+                    <option value="Tanger">
+                    <option value="Tétouan">
+                    <option value="Casablanca">
+                    <option value="Rabat">
+                    <option value="Fès">
+                    <option value="Marrakech">
+                    <option value="Oujda">
+                    <option value="Agadir">
+                    <option value="Chefchaouen">
+                    <option value="Al Hoceïma">
+                </datalist>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Hébergement souhaité</legend>
+
+            <div class="champ-radio">
+                <label>
+                    <input type="radio" name="hebergement" value="hotel" checked>
+                     Hôtel
+                </label>
+                <label>
+                    <input type="radio" name="hebergement" value="appartement">
+                     Appartement à louer
+                </label>
+                <label>
+                    <input type="radio" name="hebergement" value="maison_accueil">
+                     Maison d'accueil
+                </label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Message (optionnel)</legend>
+            <div class="champ">
+                <label for="message">Remarques ou demandes spéciales :</label>
+                <textarea id="message" name="message" rows="4" placeholder="Écrivez ici vos remarques..."></textarea>
+            </div>
+        </fieldset>
+
+        <div class="champ">
+            <input type="submit" value="Envoyer la réservation">
+            <input type="reset" value="Réinitialiser">
+        </div>
+
+    </form>
+</div>
+
+<footer>
+    <p>© 2024 - Guide Touristique Tétouan | Réalisé dans le cadre du cours HTML5</p>
+</footer>
+
+</body>
+</html>
